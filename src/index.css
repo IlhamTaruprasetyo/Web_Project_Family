@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 25 30% 15%;
+
+    --card: 40 30% 97%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 40 30% 95%;
+    --popover-foreground: 25 30% 15%;
+
+    --primary: 25 55% 35%;
+    --primary-foreground: 40 30% 98%;
+
+    --secondary: 35 25% 88%;
+    --secondary-foreground: 25 30% 20%;
+
+    --muted: 35 15% 85%;
+    --muted-foreground: 25 15% 45%;
+
+    --accent: 38 70% 50%;
+    --accent-foreground: 25 30% 15%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 85% 97%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 25 55% 35%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 40 30% 97%;
+    --sidebar-foreground: 25 30% 15%;
+    --sidebar-primary: 25 55% 35%;
+    --sidebar-primary-foreground: 40 30% 98%;
+    --sidebar-accent: 38 70% 50%;
+    --sidebar-accent-foreground: 25 30% 15%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 25 55% 35%;
+
+    --chart-1: 25 55% 35%;
+    --chart-2: 38 70% 50%;
+    --chart-3: 35 45% 45%;
+    --chart-4: 20 40% 55%;
+    --chart-5: 40 25% 65%;
+
+    --sidebar: 40 30% 97%;
+
+    --font-sans: 'Work Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    --font-serif: 'Lora', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-mono: 'Inconsolata', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+    --shadow-2xs: 0 1px 3px 0px hsl(25 30% 15% / 0.03);
+    --shadow-xs: 0 1px 3px 0px hsl(25 30% 15% / 0.05);
+    --shadow-sm: 0 1px 3px 0px hsl(25 30% 15% / 0.08), 0 1px 2px -1px hsl(25 30% 15% / 0.08);
+    --shadow: 0 1px 3px 0px hsl(25 30% 15% / 0.1), 0 1px 2px -1px hsl(25 30% 15% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(25 30% 15% / 0.1), 0 2px 4px -1px hsl(25 30% 15% / 0.08);
+    --shadow-lg: 0 10px 15px -3px hsl(25 30% 15% / 0.1), 0 4px 6px -2px hsl(25 30% 15% / 0.08);
+    --shadow-xl: 0 20px 25px -5px hsl(25 30% 15% / 0.1), 0 10px 10px -5px hsl(25 30% 15% / 0.08);
+    --shadow-2xl: 0 25px 50px -12px hsl(25 30% 15% / 0.25);
+
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+  }
+
+  .dark {
+    --background: 25 25% 10%;
+    --foreground: 40 25% 95%;
+
+    --card: 25 22% 14%;
+    --card-foreground: 40 25% 95%;
+
+    --popover: 25 20% 18%;
+    --popover-foreground: 40 25% 95%;
+
+    --primary: 38 70% 55%;
+    --primary-foreground: 25 30% 10%;
+
+    --secondary: 25 18% 22%;
+    --secondary-foreground: 40 25% 95%;
+
+    --muted: 25 15% 25%;
+    --muted-foreground: 35 15% 65%;
+
+    --accent: 38 65% 45%;
+    --accent-foreground: 40 25% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 85% 97%;
+
+    --border: 25 18% 22%;
+    --input: 25 18% 22%;
+    --ring: 38 70% 55%;
+    
+    --sidebar-background: 25 22% 12%;
+    --sidebar-foreground: 40 25% 95%;
+    --sidebar-primary: 38 70% 55%;
+    --sidebar-primary-foreground: 25 30% 10%;
+    --sidebar-accent: 38 65% 45%;
+    --sidebar-accent-foreground: 40 25% 95%;
+    --sidebar-border: 25 18% 22%;
+    --sidebar-ring: 38 70% 55%;
+    
+    --chart-1: 38 70% 55%;
+    --chart-2: 25 55% 45%;
+    --chart-3: 35 50% 50%;
+    --chart-4: 45 60% 55%;
+    --chart-5: 30 35% 50%;
+    
+    --sidebar: 25 22% 14%;
+    
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.1);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.15);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.2), 0 1px 2px -1px hsl(0 0% 0% / 0.15);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.25), 0 1px 2px -1px hsl(0 0% 0% / 0.2);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.25), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.25), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.3), 0 10px 10px -5px hsl(0 0% 0% / 0.2);
+    --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Page Transitions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.6s ease-out forwards;
+}
